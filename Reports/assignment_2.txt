@@ -1,0 +1,18 @@
+Q 1)What are 2 things that you learned from this assignment?
+  -- I learned the volatile keyword in C and the importance of its usage in multi threaded application.
+  -- Secondly, I learned how to parse command line arguments.		
+ 	
+Q 2)What are 2 mistakes that you made in this assignment, and how did you discover and fix these mistakes?
+-- I declared header files for eg.string.h in my xsh_process_ring.c file as well as process_ring.h file.While I ran make 
+   command, it threw an error of multiple definition for strcmp function.Thats where I realised this miskake and put all
+   header files at one place i.e in include folder(process_ring.h) and included this header file in my xsh_process_ring.c
+   and process_ring.c.
+--In polling method, the elapsed time was not getting printed at the end of console. It was getting printed after the 1st 
+  round of all processes.Then I realised that my parent process is terminating  before all child processes exit.Then I kept
+   parent process alive till all the child processes exit and then printed "Elapsed Time".  
+
+Q 3)If you were restarting this assignment, what would you change about how you went about completing this assignment?
+-- I would sequentially implement one functionality at a time. It becomes tedious when you try to implement multiple
+   functionalities at once  and test for them.If they work its fine, but if they dont its difficult to find the errors.
+-- I have implemented synchronisation through semaphores. I would try to implement it via message passing if I would 
+   restart this assignment.
